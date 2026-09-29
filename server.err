@@ -1,0 +1,16 @@
+INFO:     Started server process [9756]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+JSON comic generation failed
+Traceback (most recent call last):
+  File "C:\Users\mrana\OneDrive\Desktop\NM ANAND\comiccraft\app\routes.py", line 122, in generate_comic_json
+    comic, layout = _generate_comic(
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\mrana\OneDrive\Desktop\NM ANAND\comiccraft\app\routes.py", line 246, in _generate_comic
+    outline = generate_outline(generation_prompt)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mrana\OneDrive\Desktop\NM ANAND\comiccraft\app\gemini_flash.py", line 136, in generate_outline
+    raise RuntimeError(f"All models failed. Last error: {last_error}")
+RuntimeError: All models failed. Last error: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}

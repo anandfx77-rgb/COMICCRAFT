@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+static/panels/*
+!static/panels/.gitkeep
+static/exports/*
+!static/exports/.gitkeep
+static/fonts/*
+!static/fonts/.gitkeep
